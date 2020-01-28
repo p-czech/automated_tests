@@ -31,9 +31,5 @@ public class HomePage {
       return new SignInPage();
   }
 
-  public void orderDress() {
-
-  }
-
 
 }
