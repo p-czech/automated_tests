@@ -1,19 +1,14 @@
 package pages;
 
-
-import config.WebDriverSingleton;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import utils.UtilActions;
+
 import utils.DataFaker;
 
-public class SignInPage {
-
+public class SignInPage extends BasePage {
 
   public SignInPage() {
-    PageFactory.initElements(WebDriverSingleton.getInstance(), this);
-    UtilActions.waitForVisibilityOfElement(createAccountButton);
+    super();
   }
 
   DataFaker faker = new DataFaker();

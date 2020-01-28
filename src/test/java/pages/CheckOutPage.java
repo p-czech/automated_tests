@@ -1,13 +1,14 @@
 package pages;
 
-import config.WebDriverSingleton;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import utils.UtilActions;
 
-public class CheckOutPage {
 
+public class CheckOutPage extends BasePage{
+
+  public CheckOutPage() {
+    super();
+  }
 
   @FindBy(css = ".sf-menu")
   private WebElement menu;
@@ -30,10 +31,7 @@ public class CheckOutPage {
   @FindBy(css = ".cheque-indent > strong:nth-child(1)")
   private WebElement orderConfirmation;
 
-  public CheckOutPage() {
-    PageFactory.initElements(WebDriverSingleton.getInstance(), this);
-    UtilActions.waitForVisibilityOfElement(menu);
-  }
+
 
   public CheckOutPage confirmOrderedItems() {
     proceedButton.click();
@@ -59,7 +57,6 @@ public class CheckOutPage {
 
   public String confirmOrderFinal() {
     confirmMyOrderButton.click();
-    System.out.println(orderConfirmation.getText());
     return orderConfirmation.getText();
   }
 }

@@ -1,18 +1,15 @@
 package pages;
 
-import config.WebDriverSingleton;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import utils.UtilActions;
 
 
-public class ProductPage {
+public class ProductPage extends BasePage {
 
   public ProductPage (){
-    PageFactory.initElements(WebDriverSingleton.getInstance(), this);
-    UtilActions.waitForVisibilityOfElement(addToCartButton);
+    super();
   }
 
   @FindBy(id = "quantity_wanted")

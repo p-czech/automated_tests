@@ -1,22 +1,16 @@
 package pages;
 
-import config.WebDriverSingleton;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 import utils.DataFaker;
-import utils.UtilActions;
 
-import java.util.Random;
 
-public class TShirtsPage {
+public class TShirtsPage extends BasePage {
 
   DataFaker faker= new DataFaker();
 
   public TShirtsPage() {
-    PageFactory.initElements(WebDriverSingleton.getInstance(), this);
-    UtilActions.waitForVisibilityOfElement(menu);
+    super();
   }
 
   @FindBy(css = ".sf-menu")

@@ -1,17 +1,15 @@
 package pages;
 
-import config.WebDriverSingleton;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import utils.UtilActions;
-import utils.DataFaker;
 
-public class MyInfoPage {
+import utils.DataFaker;
+import utils.UtilActions;
+
+public class MyInfoPage extends BasePage {
 
   public MyInfoPage() {
-    PageFactory.initElements(WebDriverSingleton.getInstance(), this);
-    UtilActions.waitForVisibilityOfElement(identity);
+    super();
   }
 
   DataFaker faker = new DataFaker();

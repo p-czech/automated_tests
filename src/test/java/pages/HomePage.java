@@ -4,19 +4,17 @@ package pages;
 import config.WebDriverSingleton;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.interactions.Actions;
 import utils.UtilActions;
 
 
 
-public class HomePage {
+public class HomePage extends BasePage {
 
   Actions actions = new Actions(WebDriverSingleton.getInstance());
 
   public HomePage() {
-    PageFactory.initElements(WebDriverSingleton.getInstance(), this);
-    UtilActions.waitForVisibilityOfElement(menu);
+    super();
 
   }
 
