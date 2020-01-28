@@ -5,7 +5,7 @@ import config.WebDriverSingleton;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utils.Actions;
+import utils.UtilActions;
 import utils.DataFaker;
 
 public class SignInPage {
@@ -13,7 +13,7 @@ public class SignInPage {
 
   public SignInPage() {
     PageFactory.initElements(WebDriverSingleton.getInstance(), this);
-    Actions.waitForVisibilityOfElement(createAccountButton);
+    UtilActions.waitForVisibilityOfElement(createAccountButton);
   }
 
   DataFaker faker = new DataFaker();
@@ -41,11 +41,11 @@ public class SignInPage {
     return new SignUpPage();
   }
 
-  public MyAccountPage logIn() {
+  public HomePage logIn() {
     emailInputForLogIn.sendKeys("dennis.wunsch@gmail.com"); // valid email
     passwordInputForLogIn.sendKeys("os52b87468e"); // valid password
     logInButton.click();
-    return new MyAccountPage();
+    return new HomePage();
   }
 
 }

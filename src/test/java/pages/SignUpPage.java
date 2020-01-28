@@ -5,14 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-import utils.Actions;
+import utils.UtilActions;
 import utils.DataFaker;
 
 public class SignUpPage {
 
   public SignUpPage() {
     PageFactory.initElements(WebDriverSingleton.getInstance(), this);
-    Actions.waitForVisibilityOfElement(registerAccountButton);
+    UtilActions.waitForVisibilityOfElement(registerAccountButton);
   }
 
   DataFaker faker = new DataFaker();

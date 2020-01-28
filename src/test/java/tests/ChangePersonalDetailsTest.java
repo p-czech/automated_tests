@@ -5,7 +5,6 @@ import config.TestConfig;
 import org.junit.Assert;
 import org.junit.Test;
 import pages.HomePage;
-import pages.MyInfoPage;
 
 
 public class ChangePersonalDetailsTest extends TestConfig {
@@ -15,10 +14,11 @@ public class ChangePersonalDetailsTest extends TestConfig {
     String oldName = new HomePage()
             .openSignInPage()
             .logIn()
+            .openMyAccountPage()
             .openMyPersonalInfoPage()
             .changeName();
 
-    String newName = new MyInfoPage()
+    String newName = new HomePage()
             .openMyAccountPage()
             .openMyPersonalInfoPage()
             .getName();

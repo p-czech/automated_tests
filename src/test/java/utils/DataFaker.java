@@ -28,7 +28,7 @@ public String getFakePassword() {
     return faker.internet().password();
 }
 
-/* month selecting to be fixed
+/* //month selecting to be fixed
 public String getFakeBirthDate(String datePart) {
   String date = faker.date().birthday().toString();
   String[] date1 = date.toString().split(" "); //day index 2, month 1, year 5;
@@ -51,9 +51,10 @@ public String getFakeCity() {
     return faker.address().city();
 }
 
+/*//to specify only 5 digit postcode
 public String getFakePostCode() {
   return faker.address().zipCode();
-}
+}  */
 
 public String getFakeMobileNumber() {
     return faker.phoneNumber().cellPhone();

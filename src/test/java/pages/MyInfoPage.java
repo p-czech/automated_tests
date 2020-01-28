@@ -4,14 +4,14 @@ import config.WebDriverSingleton;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utils.Actions;
+import utils.UtilActions;
 import utils.DataFaker;
 
 public class MyInfoPage {
 
   public MyInfoPage() {
     PageFactory.initElements(WebDriverSingleton.getInstance(), this);
-    Actions.waitForVisibilityOfElement(identity);
+    UtilActions.waitForVisibilityOfElement(identity);
   }
 
   DataFaker faker = new DataFaker();
@@ -35,11 +35,6 @@ public class MyInfoPage {
   @FindBy(css = ".account")
   private  WebElement myNameButton;
 
-
-  public MyAccountPage openMyAccountPage() {
-    myNameButton.click();
-    return new MyAccountPage();
-  }
 
   public String changeName() {
     String oldName = firstNameInput.getAttribute("value");
